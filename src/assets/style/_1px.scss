@@ -1,0 +1,81 @@
+.wym-px-base {
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-style: solid;
+  border-color: #F1F1F1;
+  border-width: 0;
+}
+
+.wym-1px-t,
+.wym-1px-b,
+.wym-1px-l,
+.wym-1px-r,
+.wym-1px {
+  position: relative;
+}
+
+.wym-1px-t::before {
+  @extend .wym-px-base;
+  bottom: auto;
+  height: 0;
+  transform-origin: 0 0;
+  border-top-width: 1px;
+}
+
+.wym-1px-b::after {
+  @extend .wym-px-base;
+  top: auto;
+  height: 0;
+  transform-origin: 0 100%;
+  border-bottom-width: 1px;
+}
+
+.wym-1px-l::before {
+  @extend .wym-px-base;
+  right: auto;
+  width: 0;
+  transform-origin: 0 0;
+  border-left-width: 1px;
+}
+
+.wym-1px-r::after {
+  @extend .wym-px-base;
+  left: auto;
+  width: 0;
+  transform-origin: 100% 0;
+  border-right-width: 1px;
+}
+
+.wym-1px::before {
+  @extend .wym-px-base;
+  transform-origin: 0 0;
+  border-width: 1px;
+}
+
+@media (min-resolution: 2dppx) {
+  .wym-1px-t::before {
+    transform: scaleY(0.5);
+  }
+
+  .wym-1px-b::after {
+    transform: scaleY(0.5);
+  }
+
+  .wym-1px-l::before {
+    transform: scaleX(0.5);
+  }
+
+  .wym-1px-r::after {
+    transform: scaleX(0.5);
+  }
+
+  .wym-1px::before {
+    height: calc(200% - 2px);
+    width: calc(200% - 2px);
+    transform: scale(0.5);
+  }
+}
