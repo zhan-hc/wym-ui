@@ -14,6 +14,13 @@
       </ul>
       <span>正在加载...</span>
     </div>
+    <div
+      v-if="type === 'normal'"
+      class="wym-loading_normal"
+      :style="{ top: loadingPosition[position] }"
+    >
+      <div class="wym-loading_normal--content"></div>
+    </div>
   </div>
 </template>
 
@@ -24,11 +31,11 @@
     props: {
       type: {
         type: String,
-        default: 'music',
+        default: 'normal',
       },
       position: {
         type: String,
-        default: 'center',
+        default: 'top',
       },
     },
     components: {},
@@ -58,6 +65,18 @@
       transform: scaleY(1);
     }
   }
+  @keyframes normal {
+    0% {
+      border-color: transparent transparent #ff5a4c transparent;
+    }
+    50% {
+      border-color: transparent #ff5a4c #ff5a4c transparent;
+    }
+    100% {
+      border-color: #ff5a4c #ff5a4c #ff5a4c transparent;
+      transform: rotate(360deg);
+    }
+  }
   .wym-loading--wrap {
     .wym-loading_music {
       position: fixed;
@@ -82,9 +101,6 @@
           &:nth-child(2) {
             animation-delay: 0.3s;
           }
-          &:nth-child(3) {
-            // animation-delay: 0.2s;
-          }
           &:nth-child(4) {
             animation-delay: 0.5s;
           }
@@ -92,6 +108,30 @@
       }
       span {
         font-size: 12px;
+      }
+    }
+    .wym-loading_normal {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin: 0 auto;
+      &--content {
+        width: 20px;
+        height: 20px;
+        border-width: 3px;
+        border-style: solid;
+        border-color: transparent transparent #ff5a4c transparent;
+        animation: normal 2s linear 0ms infinite alternate;
+        border-radius: 50%;
       }
     }
   }
