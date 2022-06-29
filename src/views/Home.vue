@@ -5,19 +5,19 @@
       src="../assets/logo.png"
       @click="clickOpenFunComponent"
     />
-    <Loading />
+    <!-- <Loading /> -->
   </div>
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue'
-  import Loading from '../../packages/loading/index.vue'
+  import loading from '../../packages/loading'
   import dialog from '../../packages/dialog'
 
   export default defineComponent({
     name: 'Home',
     components: {
-      Loading,
+      // Loading,
     },
     setup() {
       // const {
@@ -26,12 +26,14 @@
       //   },
       // } = getCurrentInstance() as ComponentInternalInstance
       const clickOpenFunComponent = () => {
+        loading({}).show()
         dialog({})
           .then(() => {
             console.log('点击确认')
           })
           .catch(() => {
             console.log('点击取消')
+            loading({}).hide()
           })
       }
       return {
