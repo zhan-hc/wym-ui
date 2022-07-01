@@ -19,7 +19,9 @@
       class="wym-loading_normal"
       :style="{ top: loadingPosition[position] }"
     >
-      <div class="wym-loading_normal--content"></div>
+      <svg width="40" height="40">
+        <circle cx="20" cy="20" r="12" stroke="#ff5a4c" fill="none"></circle>
+      </svg>
     </div>
   </div>
 </template>
@@ -65,18 +67,20 @@
       transform: scaleY(1);
     }
   }
-  @keyframes normal {
-    0% {
-      border-color: transparent transparent #ff5a4c transparent;
-    }
-    50% {
-      border-color: transparent #ff5a4c #ff5a4c transparent;
-    }
-    100% {
-      border-color: #ff5a4c #ff5a4c #ff5a4c transparent;
-      transform: rotate(360deg);
-    }
+@keyframes circular {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
   }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -40;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -120;
+  }
+}
   .wym-loading--wrap {
     .wym-loading_music {
       position: fixed;
@@ -124,14 +128,11 @@
       height: 40px;
       border-radius: 50%;
       margin: 0 auto;
-      &--content {
-        width: 20px;
-        height: 20px;
-        border-width: 3px;
-        border-style: solid;
-        border-color: transparent transparent #ff5a4c transparent;
-        animation: normal 2s linear 0ms infinite alternate;
-        border-radius: 50%;
+      svg{
+        circle{
+          animation: circular 2s ease-in-out infinite;
+          stroke-width: 3;
+        }
       }
     }
   }
