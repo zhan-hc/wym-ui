@@ -55,7 +55,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import '@/assets/style/_1px.scss';
+  @import '@/assets/style/scss/_1px.scss';
   @keyframes music {
     0% {
       transform: scaleY(1);
@@ -67,20 +67,20 @@
       transform: scaleY(1);
     }
   }
-@keyframes circular {
-  0% {
-    stroke-dasharray: 1, 200;
-    stroke-dashoffset: 0;
+  @keyframes circular {
+    0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -40;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -120;
+    }
   }
-  50% {
-    stroke-dasharray: 90, 150;
-    stroke-dashoffset: -40;
-  }
-  100% {
-    stroke-dasharray: 90, 150;
-    stroke-dashoffset: -120;
-  }
-}
   .wym-loading--wrap {
     .wym-loading_music {
       position: fixed;
@@ -128,8 +128,8 @@
       height: 40px;
       border-radius: 50%;
       margin: 0 auto;
-      svg{
-        circle{
+      svg {
+        circle {
           animation: circular 2s ease-in-out infinite;
           stroke-width: 3;
         }

@@ -54,7 +54,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import '@/assets/style/_1px.scss';
+  @import '@/assets/style/scss/_1px.scss';
   .wym-dialog--wrap {
     .wym-dialog--overlay {
       position: fixed;
