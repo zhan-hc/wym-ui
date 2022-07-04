@@ -19,7 +19,7 @@
 <script lang="ts">
   import { defineComponent, reactive, toRefs, watch } from 'vue'
   export default defineComponent({
-    name: 'Dialog',
+    name: 'wym-dialog',
     props: {
       title: {
         type: String,
@@ -70,7 +70,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 90vw;
+      width: 80vw;
       min-height: 100px;
       background-color: #fff;
       z-index: 9999;

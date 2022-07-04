@@ -1,3 +1,7 @@
+const path = require('path')
+const resolve = function (dir) {
+  return path.resolve(__dirname, dir)
+}
 module.exports = {
   // 修改 src 为 examples
   pages: {
@@ -19,5 +23,9 @@ module.exports = {
         // 修改它的选项...
         return options;
       });
+      config.resolve.alias
+        .set('@',resolve('src'))
+        .set('views',resolve('src/views'))
+        .set('packages',resolve('packages'))
   },
 };
