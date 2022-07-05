@@ -10,11 +10,12 @@ function WYMDialog({ type, position, confirmBtnText, cancelBtnText }: any) {
   // 卸载组件
   const hide = () => {
     dialogInstance.unmount();
-    const loadingDom = document.querySelector('.wym-loading--wrap')
+    const loadingDom = document.querySelector('.wym-loading-wrap')
     loadingDom && loadingDom.remove()
   };
   const show = () => {
-    const loadingDom = document.querySelector('.wym-loading--wrap')
+    hide()
+    const loadingDom = document.querySelector('.wym-loading-wrap')
     if (loadingDom) return;
     document.body.appendChild(parentNode);
     // 挂载组件

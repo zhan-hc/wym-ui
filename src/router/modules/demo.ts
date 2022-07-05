@@ -6,6 +6,7 @@ const pages = [
   { label: 'demo首页', value: 'index' },
   { label: 'demo-弹窗组件', value: 'dialog' },
   { label: 'demo-加载组件', value: 'loading' },
+  { label: 'demo-按钮组件', value: 'button' },
   { label: 'demo-歌单组件', value: 'song-sheet' },
   { label: 'demo-滚动容器组件', value: 'scroll-view' },
 ]

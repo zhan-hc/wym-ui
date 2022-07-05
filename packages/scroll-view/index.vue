@@ -10,7 +10,7 @@
 <script lang='ts'>
 import {defineComponent, reactive, toRefs} from 'vue'
 export default defineComponent({
-  name: 'wym-scroll-view',
+  name: 'wymScrollView',
   props: {
     
   },

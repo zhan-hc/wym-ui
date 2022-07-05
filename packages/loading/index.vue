@@ -1,9 +1,9 @@
 <template>
-  <div class="wym-loading--wrap">
+  <div class="wym-loading-wrap">
     <!-- 音乐律动 -->
     <div
       v-if="type === 'music'"
-      class="wym-loading_music"
+      class="wym-loading--music"
       :style="{ top: loadingPosition[position] }"
     >
       <ul>
@@ -14,9 +14,20 @@
       </ul>
       <span>正在加载...</span>
     </div>
+    <!-- 带背景的loading -->
     <div
       v-if="type === 'normal'"
-      class="wym-loading_normal"
+      class="wym-loading--normal"
+      :style="{ top: loadingPosition[position] }"
+    >
+      <svg width="50" height="50">
+        <circle cx="25" cy="25" r="15" stroke="#c8c9cc" fill="none"></circle>
+      </svg>
+    </div>
+
+    <div
+      v-if="type === 'primary'"
+      class="wym-loading--primary"
       :style="{ top: loadingPosition[position] }"
     >
       <svg width="40" height="40">
@@ -29,7 +40,7 @@
 <script lang="ts">
   import { defineComponent, reactive, toRefs, watch } from 'vue'
   export default defineComponent({
-    name: 'wym-loading',
+    name: 'wymLoading',
     props: {
       type: {
         type: String,
@@ -81,8 +92,8 @@
       stroke-dashoffset: -120;
     }
   }
-  .wym-loading--wrap {
-    .wym-loading_music {
+  .wym-loading-wrap {
+    .wym-loading--music {
       position: fixed;
       top: 50%;
       transform: translateY(-50%);
@@ -114,7 +125,7 @@
         font-size: 12px;
       }
     }
-    .wym-loading_normal {
+    .wym-loading--primary {
       position: fixed;
       top: 50%;
       transform: translateY(-50%);
@@ -126,6 +137,26 @@
       background: #fff;
       width: 40px;
       height: 40px;
+      border-radius: 50%;
+      margin: 0 auto;
+      svg {
+        circle {
+          animation: circular 2s ease-in-out infinite;
+          stroke-width: 3;
+        }
+      }
+    }
+    .wym-loading--normal {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       margin: 0 auto;
       svg {

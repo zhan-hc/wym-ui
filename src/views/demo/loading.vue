@@ -4,25 +4,25 @@
     <button @click="showLoading('normal')">显示默认loading</button>
   </div>
   <div>
+    <button @click="showLoading('primary')">显示主要loading</button>
+  </div>
+  <div>
     <button @click="showLoading('music')">显示音乐类型loading</button>
   </div>
-  <button @click="hideLoading">隐藏默认loading</button>
 </template>
 
 <script lang='ts' setup>
 import {reactive, toRefs} from 'vue'
 import loading from 'packages/loading'
 
-const showLoading = (type: string) => {
-  loading({}).hide()
-  loading({type}).show()
-}
 
-const hideLoading = () => {
-  loading({}).hide()
+const showLoading = (type: string) => {
+  loading({type,position: 'center'}).show()
 }
 </script>
 
 <style scoped lang='scss'>
-  
+  button{
+    margin-bottom: 10px;
+  }
 </style>

@@ -19,7 +19,7 @@
 <script lang="ts">
   import { defineComponent, reactive, toRefs, watch } from 'vue'
   export default defineComponent({
-    name: 'wym-dialog',
+    name: 'wymDialog',
     props: {
       title: {
         type: String,

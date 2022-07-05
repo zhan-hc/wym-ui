@@ -17,7 +17,7 @@
   import { defineComponent, reactive, toRefs } from 'vue'
 
   export default defineComponent({
-    name: 'wym-song-sheet',
+    name: 'wymSongSheet',
     props: {
       data: {
         type: Object,
