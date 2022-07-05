@@ -1,5 +1,5 @@
 <template>
-  <h1>loading</h1>
+  <h2>loading</h2>
   <div>
     <button @click="showLoading('normal')">显示默认loading</button>
   </div>

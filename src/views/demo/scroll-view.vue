@@ -1,5 +1,5 @@
 <template>
-  <h1>横向滚动容器</h1>
+  <h2>横向滚动容器</h2>
   <scroll-view>
     <div class="wrap">
       <songSheet class="songSheet"/>

@@ -1,5 +1,5 @@
 <template>
-<h1>按钮</h1>
+<h2>按钮</h2>
   <div>
     <p>普通按钮</p>
     <wym-button class="btn"></wym-button>

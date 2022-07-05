@@ -45,7 +45,7 @@
       width: 100px;
       height: 100px;
       border-radius: 10px;
-      background-color: red;
+      background-color: #fff;
       background-repeat: no-repeat;
       background-size: cover;
       margin-bottom: 5px;

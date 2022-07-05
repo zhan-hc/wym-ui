@@ -1,5 +1,5 @@
 <template>
-<h1>弹窗</h1>
+<h2>弹窗</h2>
   <button @click="handleOpen">打开弹窗</button>
 </template>
 
