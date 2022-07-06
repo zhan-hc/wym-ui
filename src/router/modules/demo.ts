@@ -8,6 +8,8 @@ const pages = [
   { label: 'demo-加载组件', value: 'loading' },
   { label: 'demo-按钮组件', value: 'button' },
   { label: 'demo-歌单组件', value: 'song-sheet' },
+  { label: 'demo-歌曲组件', value: 'song-item' },
+  { label: 'demo-进度条组件', value: 'progress' },
   { label: 'demo-滚动容器组件', value: 'scroll-view' },
 ]
 

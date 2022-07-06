@@ -1,13 +1,13 @@
 <template>
   <div class="song-sheet-wrap">
-    <div class="song-sheet__image" :style="{ 'background-image': `url(${data.image})` }">
+    <div class="song-sheet__image" :style="{ 'background-image': `url(${data.imageUrl})` }">
       <span class="song-sheet__count">
         <i class="iconfont icon-bofang4"></i>
         {{ formatCount(data.playCount) }}
       </span>
     </div>
     <div class="song-sheet__info ellipsis2">
-      <span class="extra" v-if="data.extraText">{{data.extraText}}</span>
+      <span class="song-sheet__info-extra" v-if="data.extraText">{{data.extraText}}</span>
       {{data.title}}
     </div>
   </div>
@@ -24,7 +24,7 @@
         default: () => {
           return {
               playCount: 0,
-              image: '',
+              imageUrl: '',
               title: ''
             }
         },
@@ -70,11 +70,15 @@
       white-space:normal;
       font-size: 14px;
       text-align: left;
-      .extra{
+      &-extra{
+        display: inline-block;
         font-size: 10px;
         background-color: #FFEFEE;
-        color: #E08A57;
-        padding: 0 5px;
+        color: #FF8C00;
+        padding: 2px 5px;
+        transform: scale(0.8);
+          transform-origin: right;
+          margin-left: -10px;
       }
     }
   }
