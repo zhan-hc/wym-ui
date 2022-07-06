@@ -11,6 +11,8 @@
     { label: '加载组件', value: 'loading' },
     { label: '按钮组件', value: 'button' },
     { label: '歌单组件', value: 'song-sheet' },
+    { label: '歌曲组件', value: 'song-item' },
+    { label: '进度条组件', value: 'progress' },
     { label: '滚动容器组件', value: 'scroll-view' }
   ]
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <button class="wym-button" :class="[{'wym-button--disabled' : disabled}, {'wym-button--round' : round},`wym-button--${size}`]">我是按钮</button>
+  <button class="wym-button" :class="[{'wym-button--disabled' : disabled}, {'wym-button--round' : round},`wym-button--${size}`]"><slot></slot></button>
 </template>
 <script lang='ts'>
 import {defineComponent, reactive, toRefs} from 'vue'
