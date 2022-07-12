@@ -1,29 +1,33 @@
 <template>
   <h2>进度条</h2>
   <p>默认配置</p>
-  <wym-progress :percentage="percentage" :strokeWidth="8"/>
+  <wym-progress :percentage="percentage" />
   <p>进度条轨道颜色 color | 圆点颜色 pivot-color</p>
-  <wym-progress :percentage="percentage" :strokeWidth="5" color="#1989fa" pivot-color="red"/>
+  <wym-progress
+    :percentage="percentage"
+    :strokeWidth="5"
+    color="#1989fa"
+    pivot-color="red"
+  />
   <button @click="add">+10</button>
   <button @click="reduce">-10</button>
-  <p>{{percentage}}%</p>
+  <p>{{ percentage }}%</p>
 </template>
 
-<script lang='ts' setup>
-import wymProgress from 'packages/progress/index.vue'
-import {defineComponent, reactive, ref} from 'vue'
-let percentage = ref(0)
+<script lang="ts" setup>
+  import { ref } from 'vue'
+  let percentage = ref(0)
 
-const add = () => {
-  percentage.value < 100 && (percentage.value += 10)
-}
-const reduce = () => {
-  percentage.value > 0 && (percentage.value -= 10)
-}
+  const add = () => {
+    percentage.value < 100 && (percentage.value += 10)
+  }
+  const reduce = () => {
+    percentage.value > 0 && (percentage.value -= 10)
+  }
 </script>
 
-<style scoped lang='scss'>
-  .pivot{
+<style scoped lang="scss">
+  .pivot {
     width: 20px;
     height: 20px;
     background: blue;

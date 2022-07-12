@@ -1,5 +1,9 @@
+import dialog from "packages/dialog";
+import loading from "packages/loading";
 const baseMixin = {
   methods: {
+    dialog,
+    loading,
     // 转换播放量等数据
     formatCount(num: number): string {
       let str = String(num);

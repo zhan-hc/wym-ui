@@ -11,18 +11,17 @@
   </div>
 </template>
 
-<script lang='ts' setup>
-import {reactive, toRefs} from 'vue'
-import loading from 'packages/loading'
+<script lang="ts" setup>
+  import useCurrentInstance from '@/utils/useCurrentInstance'
+  const { proxy } = useCurrentInstance()
 
-
-const showLoading = (type: string) => {
-  loading({type,position: 'center'}).show()
-}
+  const showLoading = (type: string) => {
+    proxy.$loading({ type, position: 'center' }).show()
+  }
 </script>
 
-<style scoped lang='scss'>
-  button{
+<style scoped lang="scss">
+  button {
     margin-bottom: 10px;
   }
 </style>
