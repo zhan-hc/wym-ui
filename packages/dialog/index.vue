@@ -1,7 +1,7 @@
 <template>
-  <div class="wym-dialog--wrap">
-    <div class="wym-dialog--overlay"></div>
-    <div class="wym-dialog--center">
+  <div class="wym-dialog-wrap">
+    <div class="wym-dialog-overlay"></div>
+    <div class="wym-dialog-center">
       <div class="wym-dialog__header">{{ title }}</div>
       <div class="wym-dialog__content wym-1px-b">
         <div class="wym-dialog__message">
@@ -55,8 +55,8 @@
 
 <style scoped lang="scss">
   @import '@/assets/style/scss/_1px.scss';
-  .wym-dialog--wrap {
-    .wym-dialog--overlay {
+  .wym-dialog-wrap {
+    .wym-dialog-overlay {
       position: fixed;
       top: 0;
       left: 0;
@@ -65,7 +65,7 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.7);
     }
-    .wym-dialog--center {
+    .wym-dialog-center {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -87,7 +87,7 @@
         font-size: 14px;
       }
       .wym-dialog__footer {
-        padding-top: 10px;
+        padding-top: 20px;
         display: flex;
         color: #ee0a24;
         span {

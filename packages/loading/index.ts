@@ -1,10 +1,12 @@
 import { createApp } from "vue";
 import Loading from "./index.vue";
-function WYMDialog({ type, position, confirmBtnText, cancelBtnText }: any) {
-  const dialogInstance = createApp(Loading, {
-    type: type || "normal",
-    position: position || "top",
-  });
+
+interface Options {
+  type?: string,
+  position?: string,
+} 
+function WYMDialog(options: Options) {
+  const dialogInstance = createApp(Loading, {...options});
   // 创建一个挂载容器
   const parentNode = document.createElement("div");
   // 卸载组件

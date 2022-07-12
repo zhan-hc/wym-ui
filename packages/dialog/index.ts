@@ -1,14 +1,19 @@
 import { createApp } from "vue";
 import Dialog from "./index.vue";
-function WYMDialog({ title, message, confirmBtnText, cancelBtnText }: any) {
+
+
+interface Options {
+  title?: string,
+  message?: string,
+  confirmBtnText?: string,
+  cancelBtnText?: string
+}
+
+function WYMDialog(options: Options) {
   return new Promise<void>((resolve, reject) => {
     // 实例化组件，createApp第二个参数是props
     const dialogInstance = createApp(Dialog, {
-      title: title || "提示",
-      message:
-        message || "这是一个弹出框，代码是写出来给人看的，附带能在机器上运行。",
-      confirmBtnText: confirmBtnText || "确定",
-      cancelBtnText: cancelBtnText || "取消",
+      ...options,
       onConfirm: () => {
         unmount();
         resolve();
