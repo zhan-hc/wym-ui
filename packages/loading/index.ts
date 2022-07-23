@@ -5,13 +5,13 @@ interface Options {
   type?: string,
   position?: string,
 } 
-function WYMDialog(options: Options) {
-  const dialogInstance = createApp(Loading, {...options});
+function WYMLoading(options: Options) {
+  const loadingInstance = createApp(Loading, {...options});
   // 创建一个挂载容器
   const parentNode = document.createElement("div");
   // 卸载组件
   const hide = () => {
-    dialogInstance.unmount();
+    loadingInstance.unmount();
     const loadingDom = document.querySelector('.wym-loading-wrap')
     loadingDom && loadingDom.remove()
   };
@@ -21,7 +21,7 @@ function WYMDialog(options: Options) {
     if (loadingDom) return;
     document.body.appendChild(parentNode);
     // 挂载组件
-    dialogInstance.mount(parentNode);
+    loadingInstance.mount(parentNode);
   };
   return {
     show,
@@ -29,4 +29,4 @@ function WYMDialog(options: Options) {
   };
 }
 
-export default WYMDialog;
+export default WYMLoading;

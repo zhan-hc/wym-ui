@@ -9,6 +9,7 @@
   const comList = [
     { label: '弹窗组件', value: 'dialog' },
     { label: '加载组件', value: 'loading' },
+     { label: 'Toast组件', value: 'toast' },
     { label: '按钮组件', value: 'button' },
     { label: '歌单组件', value: 'song-sheet' },
     { label: '歌曲组件', value: 'song-item' },
