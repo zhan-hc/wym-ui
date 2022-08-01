@@ -1,11 +1,16 @@
 {
-  "name": "wym-ui",
-  "version": "0.1.0",
-  "private": true,
+  "name": "wy-music-ui",
+  "description": "vue3 wangyi mobile ui",
+  "author": "hc-zhan",
+  "license": "MIT",
+  "version": "0.1.5",
+  "private": false,
+  "main": "lib/packages.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name packages --dest lib packages/index.ts"
   },
   "dependencies": {
     "core-js": "^3.6.5",

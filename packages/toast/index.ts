@@ -7,6 +7,7 @@ interface Options {
 } 
 // 创建默认参数
 const defaultOpt = {
+  message: 'Toast',
   duration: 2000
 }
 function parseOptions (message: string | Options) : Options {
@@ -21,7 +22,6 @@ function WYMToast(options: string | Options = {}) {
   const ToastInstance = createApp(Toast, {...defaultOpt, ...options});
   // 创建一个挂载容器
   const parentNode = document.createElement("div");
-  let timer = null
   // // 卸载组件
   const clear = () => {
     ToastInstance.unmount();
@@ -31,13 +31,13 @@ function WYMToast(options: string | Options = {}) {
 
     document.body.appendChild(parentNode);
     // 挂载组件
+    const props: any = ToastInstance?._props
     ToastInstance.mount(parentNode);
-    if (options.duration) {
-      clearTimeout(timer)
-      timer = setTimeout(() => {
+    if (props?.duration) {
+      const timer = setTimeout(() => {
         clear()
         clearTimeout(timer)
-      }, options.duration)
+      }, props.duration)
     }
 
   return {

@@ -6,6 +6,7 @@ import wymSongItem from "./song-item";
 import wymSongSheet from "./song-sheet";
 import dialog from "./dialog";
 import loading from "./loading";
+import toast from "./toast";
 // 所有组件列表
 const components = [
   wymButton,
@@ -23,8 +24,9 @@ const install = (app: App): void => {
   components.map((component) => app.component(component.name, component));
   app.config.globalProperties.$dialog = dialog
   app.config.globalProperties.$loading = loading
+  app.config.globalProperties.$toast = toast
 };
 
 export default {
-  install,
+  install
 };
