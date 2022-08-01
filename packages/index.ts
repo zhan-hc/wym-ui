@@ -4,11 +4,15 @@ import wymProgress from "./progress";
 import wymScrollView from "./scroll-view";
 import wymSongItem from "./song-item";
 import wymSongSheet from "./song-sheet";
+import wymIcon from "./icon";
 import dialog from "./dialog";
 import loading from "./loading";
 import toast from "./toast";
+// 引入图标
+import "assets/iconfont/iconfont.js";
 // 所有组件列表
 const components = [
+  wymIcon,
   wymButton,
   wymProgress,
   wymScrollView,

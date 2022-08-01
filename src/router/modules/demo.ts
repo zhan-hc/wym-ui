@@ -7,6 +7,7 @@ const pages = [
   { label: 'demo-弹窗组件', value: 'dialog' },
   { label: 'demo-加载组件', value: 'loading' },
   { label: 'demo-Toast组件', value: 'toast' },
+  { label: 'demo-icon图标', value: 'icon' },
   { label: 'demo-按钮组件', value: 'button' },
   { label: 'demo-歌单组件', value: 'song-sheet' },
   { label: 'demo-歌曲组件', value: 'song-item' },

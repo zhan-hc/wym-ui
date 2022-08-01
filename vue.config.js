@@ -25,6 +25,7 @@ module.exports = {
       });
       config.resolve.alias
         .set('@',resolve('src'))
+        .set('assets',resolve('src/assets'))
         .set('views',resolve('src/views'))
         .set('packages',resolve('packages'))
   },

@@ -2,7 +2,8 @@
   <div class="wy-song-item-wrap" @click="handleChange">
     <div class="wy-song-item__image" >
       <img :src="data.imageUrl" alt="歌曲图片"/>
-      <i class="iconfont icon-bofang2"></i>
+      <!-- <i class="iconfont icon-bofang2"></i> -->
+      <wymIcon class="icon-bofang" name="bofang2" color="#fff"/>
     </div>
     <div class="wy-song-item__info wym-1px-b">
       <div class="wy-song-item__info-title ellipsis">
@@ -18,9 +19,12 @@
 
 <script lang='ts'>
 import {defineComponent, reactive, toRefs} from 'vue'
-
+import wymIcon from '../icon/index.vue'
 export default defineComponent({
   name: 'wymSongItem',
+  components: {
+    wymIcon
+  },
   props: {
     data: {
       type: Object,
@@ -63,7 +67,7 @@ export default defineComponent({
         height: 100%;
         border-radius: 5px;
       }
-      .icon-bofang2{
+      .icon-bofang{
         position: absolute;
         top: 50%;
         left: 50%;

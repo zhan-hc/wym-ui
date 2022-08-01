@@ -5,7 +5,7 @@
       :style="{ 'background-image': `url(${data.imageUrl})` }"
     >
       <span class="song-sheet__count">
-        <i class="iconfont icon-bofang4"></i>
+        <wymIcon class="iconfont" name="bofang4" size="12px"/>
         {{ formatCount(data.playCount) }}
       </span>
     </div>
@@ -19,24 +19,26 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent, reactive, toRefs } from 'vue'
-
-  export default defineComponent({
-    name: 'wymSongSheet',
-    props: {
-      data: {
-        type: Object,
-        default: () => {
-          return {
-            playCount: 0,
-            imageUrl: '',
-            title: '',
-          }
-        },
+import { defineComponent, reactive, toRefs } from 'vue'
+import wymIcon from '../icon/index.vue'
+export default defineComponent({
+  name: 'wymSongSheet',
+  components: {
+    wymIcon
+  },
+  props: {
+    data: {
+      type: Object,
+      default: () => {
+        return {
+          playCount: 0,
+          imageUrl: '',
+          title: '',
+        }
       },
     },
-    components: {},
-  })
+  }
+})
 </script>
 
 <style scoped lang="scss">
@@ -59,14 +61,15 @@
         position: absolute;
         top: 5px;
         right: 5px;
+        display: flex;
+        align-items: center;
         font-size: 10px;
         -webkit-text-size-adjust: 100%;
         color: #fff;
         padding: 2px 5px;
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 20px;
-        .icon-bofang4 {
-          font-size: 12px;
+        .iconfont {
           margin-right: 2px;
         }
       }

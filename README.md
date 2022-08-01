@@ -1,24 +1,20 @@
 # wym-ui
+这是一个基于网易云音乐移动端的h5ui组件库
 
-## Project setup
+## 使用
 ```
-npm install
-```
+npm install wy-music-ui
 
-### Compiles and hot-reloads for development
+yarn add wy-music-ui
 ```
-npm run serve
-```
+## 引入
 
-### Compiles and minifies for production
-```
-npm run build
-```
+在main文件引入
 
-### Lints and fixes files
-```
-npm run lint
-```
+```js
+// 引入样式
+import 'wy-music-ui/lib/packages.css'
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+import wymui from 'wy-music-ui'
+app.use(wymui)
+```
