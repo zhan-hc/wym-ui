@@ -11,7 +11,7 @@
       </div>
       <div class="wy-song-item__info-desc ellipsis">
         <span class="wy-song-item__info-subtitle" v-if="data.subTitle">{{data.subTitle}}</span>
-        <span>{{data.desc}}</span>
+        <span class="wy-song-item__info-rcm">{{data.desc}}</span>
         </div>
     </div>
   </div>
@@ -92,6 +92,7 @@ export default defineComponent({
         }
       }
       .wy-song-item__info-desc{
+        position: relative;
         font-size: 12px;
         color: #999;
         .wy-song-item__info-subtitle{
@@ -100,10 +101,12 @@ export default defineComponent({
           background-color: #FFEFEE;
           color: #FF8C00;
           padding: 2px 5px;
-          transform: scale(0.8);
-          transform-origin: right;
-          margin-left: -20px;
+          zoom: 0.8;
+          margin-right: 5px;
         }
+      }
+      .wy-song-item__info-rcm{
+        vertical-align: bottom;
       }
     }
 
