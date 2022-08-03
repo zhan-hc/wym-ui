@@ -1,11 +1,11 @@
 <template>
-  <div class="song-sheet-wrap">
+  <div class="song-sheet-wrap" :style="{ width }">
     <div
       class="song-sheet__image"
-      :style="{ 'background-image': `url(${data.imageUrl})` }"
+      :style="{ 'background-image': `url(${data.imageUrl})`, width, height }"
     >
       <span class="song-sheet__count">
-        <wymIcon class="iconfont" name="bofang4" size="12px"/>
+        <wymIcon class="iconfont" name="bofang4" size="12px" color="#fff"/>
         {{ formatCount(data.playCount) }}
       </span>
     </div>
@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs } from 'vue'
+import { defineComponent } from 'vue'
 import wymIcon from '../icon/index.vue'
 export default defineComponent({
   name: 'wymSongSheet',
@@ -37,6 +37,14 @@ export default defineComponent({
         }
       },
     },
+    width: {
+      type: String,
+      default: '100px',
+    },
+    height: {
+      type: String,
+      default: '100px',
+    }
   }
 })
 </script>
