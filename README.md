@@ -103,19 +103,36 @@ duration为0表示不消失，需要通过$toast().clear()手动清除
 ### 进度条progress
 
 ```html
+  <!-- 默认进度条 -->
   <wym-progress
     :percentage="50"
     :strokeWidth="5"
     color="#1989fa"
   />
+  <!-- 圆环进度条 -->
+  <wym-progress
+    type="circle"
+    :percentage="percentage"
+    :strokeWidth="5"
+    size="100"
+  >
+    {{percentage}}%
+  </wym-progress>
 ```
 |  参数  | 说明  | 默认值  |
 |  ----  | ----  | ----  |
+| type  | 类型 可选 normal/circle(圆环进度条) | normal |
 | percentage  | 进度百分比 | 0 |
 | strokeWidth  | 进度条粗细 | 2 |
 | color  | 进度条颜色 | #fff |
 | pivot-color  | 进度条点的颜色 | #000 |
 | track-color  | 轨道颜色 | #000 |
+| size  | 圆环进度条的直径 | 50 |
+
+** 插槽slot
+|  名称  | 说明  |
+|  ----  | ----  |
+| default| 自定义内容（圆环进度条特有） |
 
 ------
 ### 滚动容器scrollview

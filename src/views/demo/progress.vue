@@ -8,9 +8,21 @@
     :strokeWidth="5"
     color="#1989fa"
     pivot-color="red"
-  />
+  >
+  <template #pivot>
+   {{percentage}}%
+  </template>
+  </wym-progress>
   <button @click="add">+10</button>
   <button @click="reduce">-10</button>
+  <wym-progress
+    type="circle"
+    :percentage="percentage"
+    :strokeWidth="5"
+    size="100"
+  >
+    {{percentage}}%
+  </wym-progress>
   <p>{{ percentage }}%</p>
 </template>
 
