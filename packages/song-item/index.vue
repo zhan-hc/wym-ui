@@ -1,8 +1,7 @@
 <template>
-  <div class="wy-song-item-wrap" @click="handleChange">
+  <div class="wy-song-item-wrap">
     <div class="wy-song-item__image" >
       <img :src="data.imageUrl" alt="歌曲图片"/>
-      <!-- <i class="iconfont icon-bofang2"></i> -->
       <wymIcon class="icon-bofang" name="bofang2" color="#fff"/>
     </div>
     <div class="wy-song-item__info wym-1px-b">
@@ -30,21 +29,17 @@ export default defineComponent({
       type: Object,
       default: () => {
         return {
-            imageUrl: '',
-            title: '',
-            authors: '',
-            desc: '',
-            subTitle: ''
-          }
-      },
-    },
+          imageUrl: '',
+          title: '',
+          authors: '',
+          desc: '',
+          subTitle: ''
+        }
+      }
+    }
   },
   setup(props, ctx) {
-    const handleChange = () => {
-      ctx.emit('change')
-    }
     return {
-      handleChange
     }
   }
 })

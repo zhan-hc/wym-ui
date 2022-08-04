@@ -27,9 +27,8 @@
     </div>
     <svg :width="boardSize" :height="boardSize">
       <circle :cx="circleCenter" :cy="circleCenter" :r="radius" :stroke="trackColor" fill="none" :stroke-width="strokeWidth"></circle>
-      <path :d="path_right" :stroke="color" :stroke-width="strokeWidth" fill="none" :style="{'stroke-dasharray': `${percentage*girth*0.01}, ${girth}`}"/>
-      <path :d="path_left" :stroke="color" :stroke-width="strokeWidth" fill="none" :style="{'stroke-dasharray': `${percentage > 50 ? (percentage-50)*girth*0.01 : 0}, ${girth}`}"/>
-    </svg>
+      <path :d="path" :stroke="color" :stroke-width="strokeWidth" :stroke-linecap="round ? 'round' : ''" fill="none" :style="{'stroke-dasharray': `${percentage*girth*0.01}, ${girth}`}"/>
+      </svg>
   </div>
 </template>
 
@@ -67,6 +66,11 @@
       size: {
         type: String,
         default: '50'
+      },
+      /* 圆环进度条是否圆角 */
+      round: {
+        type: Boolean,
+        default: false
       }
     },
     setup(props, ctx) {
@@ -76,24 +80,21 @@
         'border-radius': '50%',
         'background-color': props.pivotColor,
       })
-      // 右边圆路径
-      const path_right = computed(() => `M ${+props.size/2} ${props.strokeWidth} A ${+props.size/2 - props.strokeWidth} ${+props.size/2 - props.strokeWidth}, 0, 0, 1, ${+props.size/2}, ${+props.size - props.strokeWidth}`)
-      // 左边圆路径
-      const path_left = computed(() => `M ${+props.size/2} ${+props.size - props.strokeWidth} A ${+props.size/2 - props.strokeWidth} ${+props.size/2 - props.strokeWidth}, 0, 0, 1, ${+props.size/2}, ${props.strokeWidth}`)
-      // 画板大小
+      // 圆环路径
+      const path = computed(() => `M ${+props.size/2} ${props.strokeWidth} A ${+props.size/2 - props.strokeWidth} ${+props.size/2 - props.strokeWidth}, 0, 0, 1, ${+props.size/2}, ${+props.size - props.strokeWidth}  A ${+props.size/2 - props.strokeWidth} ${+props.size/2 - props.strokeWidth}, 0, 0, 1, ${+props.size/2}, ${props.strokeWidth}`)
+     // 画板大小
       const boardSize = computed(() => +props.size)
       // 圆形轨道中心坐标
       const circleCenter = computed(() => +props.size/2)
       // 半径s
       const radius = computed(() => +props.size/2 - props.strokeWidth)
       // 周长（周长=2Πr = 直径*Π = size*Π = (size - 2*strokeWidth)*Π）
-      const girth = computed(() => (+props.size - props.strokeWidth*2)*3.14)
+      const girth = computed(() => (+props.size - props.strokeWidth*2)*Math.PI)
       return {
+        path,
         girth,
         radius,
         pivotStyle,
-        path_right,
-        path_left,
         boardSize,
         circleCenter
       }

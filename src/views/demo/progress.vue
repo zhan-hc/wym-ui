@@ -20,6 +20,7 @@
     :percentage="percentage"
     :strokeWidth="5"
     size="100"
+    round
   >
     {{percentage}}%
   </wym-progress>

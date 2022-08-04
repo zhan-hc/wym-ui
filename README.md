@@ -115,6 +115,7 @@ duration为0表示不消失，需要通过$toast().clear()手动清除
     :percentage="percentage"
     :strokeWidth="5"
     size="100"
+    round
   >
     {{percentage}}%
   </wym-progress>
@@ -128,6 +129,7 @@ duration为0表示不消失，需要通过$toast().clear()手动清除
 | pivot-color  | 进度条点的颜色 | #000 |
 | track-color  | 轨道颜色 | #000 |
 | size  | 圆环进度条的直径 | 50 |
+| round  | 圆环进度条的圆角 | false |
 
 ** 插槽slot
 |  名称  | 说明  |
