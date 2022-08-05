@@ -1,11 +1,20 @@
 import { createApp } from "vue";
-import Loading from "./index.vue";
+import Loading from "./loading";
 
 interface Options {
   type?: string,
   position?: string,
-} 
-function WYMLoading(options: Options) {
+  message?: string
+}
+
+function parseOptions (option: string | Options) : Options {
+  if(option !== null && typeof option === 'object'){
+      return option;
+  }
+  return { message: option }
+}
+function WYMLoading(options: string | Options = {}) {
+  options = parseOptions(options)
   const loadingInstance = createApp(Loading, {...options});
   // 创建一个挂载容器
   const parentNode = document.createElement("div");

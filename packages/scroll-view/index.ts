@@ -1,5 +1,5 @@
 import { App } from "vue";
-import ScrollView from "./index.vue";
+import ScrollView from "./scroll-view";
 
 // 定义 install 方法， App 作为参数
 ScrollView.install = (app: App): void => {

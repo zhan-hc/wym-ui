@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import Dialog from "./index.vue";
+import Dialog from "./dialog";
 
 
 interface Options {
@@ -9,10 +9,16 @@ interface Options {
   cancelBtnText?: string
 }
 
+const defaultOpt: Options = {
+  title: '提示',
+  message: '代码是写出来给人看的，附带能在机器上运行。'
+}
+
 function WYMDialog(options: Options) {
   return new Promise<void>((resolve, reject) => {
     // 实例化组件，createApp第二个参数是props
     const dialogInstance = createApp(Dialog, {
+      // ...defaultOpt,
       ...options,
       onConfirm: () => {
         unmount();

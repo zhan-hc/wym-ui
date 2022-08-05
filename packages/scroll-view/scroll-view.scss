@@ -1,0 +1,9 @@
+.scroll-view-wrap{
+  display: flex;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: scroll;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}

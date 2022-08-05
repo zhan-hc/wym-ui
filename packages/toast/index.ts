@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import Toast from "./index.vue";
+import Toast from "./toast";
 
 interface Options {
   message?: string,
@@ -18,16 +18,19 @@ function parseOptions (message: string | Options) : Options {
 }
 
 function WYMToast(options: string | Options = {}) {
+
   options = parseOptions(options)
-  const ToastInstance = createApp(Toast, {...defaultOpt, ...options});
-  // 创建一个挂载容器
-  const parentNode = document.createElement("div");
+  const ToastInstance = createApp(Toast, {...defaultOpt, ...options})
   // // 卸载组件
   const clear = () => {
     ToastInstance.unmount();
     const loadingDom = document.querySelector('.wym-toast')
     loadingDom?.remove()
   };
+
+  clear()
+  // 创建一个挂载容器
+  const parentNode = document.createElement("div")
 
     document.body.appendChild(parentNode);
     // 挂载组件

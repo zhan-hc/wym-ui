@@ -1,5 +1,5 @@
 import { App } from 'vue'
-import Progress from './index.vue'
+import Progress from './prgoress'
  
 // 定义 install 方法， App 作为参数
 Progress.install = (app: App): void => {

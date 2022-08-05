@@ -1,5 +1,5 @@
 import { App } from "vue";
-import SongSheet from "./index.vue";
+import SongSheet from "./song-sheet";
 
 // 定义 install 方法， App 作为参数
 SongSheet.install = (app: App): void => {

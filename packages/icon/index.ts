@@ -1,5 +1,5 @@
 import { App } from 'vue'
-import icon from './index.vue'
+import icon from './icon'
  
 // 定义 install 方法， App 作为参数
 icon.install = (app: App): void => {

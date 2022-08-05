@@ -77,11 +77,13 @@ app.use(wymui)
   const { appContext } = getCurrentInstance()
   const proxy = appContext.config.globalProperties
   proxy.$loading({ type: 'music', position: 'center' }).show()
+  proxy.$loading('正在加载中...').show()
 ```
 |  参数  | 说明  | 默认值  |
 |  ----  | ----  | ----  |
 | type  | 类型 可选 normal/music/primary  | normal |
 | position  | 展示位置 可选 top/bottom/center | top |
+| message  | loading文案 | - |
 ------
 ### toast
 

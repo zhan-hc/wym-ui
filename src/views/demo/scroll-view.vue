@@ -1,7 +1,6 @@
 <template>
   <h2>横向滚动容器</h2>
   <wym-scroll-view>
-    <!-- <div class="wrap"> -->
     <wym-song-sheet
       class="songSheet"
       :data="{
@@ -25,7 +24,6 @@
     <wym-song-sheet class="songSheet" />
     <wym-song-sheet class="songSheet" />
     <wym-song-sheet class="songSheet" />
-    <!-- </div> -->
   </wym-scroll-view>
 </template>
 
