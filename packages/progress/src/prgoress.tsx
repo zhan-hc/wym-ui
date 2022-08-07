@@ -107,7 +107,7 @@ export default defineComponent({
     )
     // 圆环进度条
     const  progressCircle = (
-      <div class="wym-progress__circle">
+      <div class="wym-progress__circle" style={{width: `${+size}px`, height: `${+size}px`}}>
         <div class="wym-progress-slot">
           {$slots.default?.()}
           {!$slots.default && textElement}

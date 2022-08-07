@@ -9,6 +9,7 @@
     color="#1989fa"
     pivot-color="red"
   ></wym-progress>
+  <p>{{ percentage }}%</p>
   <button @click="add">+10</button>
   <button @click="reduce">-10</button>
   <wym-progress
@@ -21,7 +22,6 @@
   >
     {{percentage}}%
   </wym-progress>
-  <p>{{ percentage }}%</p>
 </template>
 
 <script lang="ts" setup>
@@ -45,5 +45,8 @@
     padding: 2px 5px;
     border-radius: 10px;
     font-size: 12px;
+  }
+  /deep/ .wym-progress__circle{
+    margin: 20px auto;
   }
 </style>
