@@ -6,13 +6,14 @@ export default defineComponent({
   name: 'wymSongItem',
   props: songItemProps,
   setup(props: SongItemProps) {
-    const { data } = toRefs(props)
+    const { data, icon } = toRefs(props)
     return {
-      data
+      data,
+      icon
     }
   },
   render() {
-    const { data } = this
+    const { data, icon } = this
 
     const subTitleElement = (<span class="wy-song-item__info-subtitle">{data.subTitle}</span>)
 
@@ -20,7 +21,7 @@ export default defineComponent({
       <div class="wy-song-item-wrap">
         <div class="wy-song-item__image" >
           <img src= {data.imageUrl} alt="歌曲图片"/>
-          <wymIcon class="icon-bofang" name="bofang2" color="#fff"/>
+          <wymIcon class="icon-svg" {...icon} />
         </div>
         <div class="wy-song-item__info wym-1px-b">
           <div class="wy-song-item__info-title ellipsis">

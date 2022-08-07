@@ -168,7 +168,8 @@ data
 | imageUrl  | 歌曲图片 | - |
 | title  | 歌曲名称 | - |
 | authors  | 歌曲作者 | - |
-| desc  | 歌曲描述| - |
+| desc  | 歌曲描述 | - |
+| icon  | 图标（{name,size,color}） | {name:bofang2,color: '#fff'} |
 | subTitle  | 歌曲副标题 | -（非必传） |
 
 ------
@@ -195,4 +196,5 @@ data
 |  ----  | ----  | ----  |
 | imageUrl  | 歌单图片 | - |
 | title  | 歌单名称 | - |
+| icon  | 图标（{name,size,color}） | {name:bofang4, color: '#fff', size: '12px'} |
 | playCount  | 歌单播放量 | - |

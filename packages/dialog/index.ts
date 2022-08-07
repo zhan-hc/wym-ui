@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import Dialog from "./dialog";
+import Dialog from "./src/dialog";
 
 
 interface Options {

@@ -7,15 +7,16 @@ export default defineComponent({
   name: 'wymSongSheet',
   props: songSheetProps,
   setup(props: SongSheetProps) {
-    const { data, width, height } = toRefs(props)
+    const { data, width, height, icon } = toRefs(props)
     return {
       data,
+      icon,
       width,
       height
     }
   },
   render() {
-    const { data, width, height } = this
+    const { data, icon, width, height } = this
 
     const subTitleElement = (<span class="song-sheet__info-subtitle">{data.subTitle}</span>)
     return (
@@ -25,7 +26,7 @@ export default defineComponent({
           style={{ backgroundImage: `url(${data.imageUrl})`, width, height }}
         >
           <span class="song-sheet__count">
-            <wymIcon class="iconfont" name="bofang4" size="12px" color="#fff"/>
+            <wymIcon class="iconfont" {...icon}/>
             { formatCount(data.playCount) }
           </span>
         </div>

@@ -1,11 +1,11 @@
 import { ExtractPropTypes, PropType } from 'vue';
+import { IconProps } from 'packages/icon/src/icon-types'
 export type sheetData = {
   playCount: number,
   title: string,
   imageUrl: string,
   subTitle?: string
 }
-
 
 export const songSheetProps = {
   data: {
@@ -19,6 +19,16 @@ export const songSheetProps = {
   height: {
     type: String,
     default: '100px',
+  },
+  icon: {
+    type: Object as PropType<IconProps>,
+    default: () => {
+      return {
+        name: 'bofang4',
+        color: '#fff',
+        size: '12px'
+      }
+    }
   }
 };
 

@@ -8,7 +8,6 @@ import wymIcon from "./icon";
 import dialog from "./dialog";
 import loading from "./loading";
 import toast from "./toast";
-import baseMixin from "@/utils/base";
 import  "@/assets/style/css/reset.css";
 // 引入图标
 import "assets/iconfont/iconfont.js";
@@ -29,8 +28,6 @@ const install = (app: App): void => {
   app.config.globalProperties.$dialog = dialog
   app.config.globalProperties.$loading = loading
   app.config.globalProperties.$toast = toast
-
-  app.mixin(baseMixin)
 };
 
 export default {

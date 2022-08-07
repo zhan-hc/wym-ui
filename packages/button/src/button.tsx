@@ -11,9 +11,6 @@ export default defineComponent({
     const { disabled, round, size } = toRefs(props)
 
     const onClick = (e: MouseEvent) => {
-      if (disabled) {
-        return;
-      }
       ctx.emit('click', e);
     };
     return () => {

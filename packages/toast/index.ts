@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import Toast from "./toast";
+import Toast from "./src/toast";
 
 interface Options {
   message?: string,

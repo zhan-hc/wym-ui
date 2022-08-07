@@ -1,5 +1,5 @@
 import { App } from 'vue'
-import Button from './button'
+import Button from './src/button'
  
 // 定义 install 方法， App 作为参数
 Button.install = (app: App): void => {

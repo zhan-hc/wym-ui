@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import Loading from "./loading";
+import Loading from "./src/loading";
 
 interface Options {
   type?: string,
