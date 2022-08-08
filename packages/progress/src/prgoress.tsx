@@ -89,6 +89,7 @@ export default defineComponent({
     const textElement = (
       <div>{percentage}%</div>
     )
+    const wrapStyle = {width: `${+size}px`, height: `${+size}px`}
     // 默认进度条
     const progressNormal = (
       <div class="wym-progress__normal" style={{ height: `${strokeWidth}px`, backgroundColor: trackColor }} >
@@ -107,8 +108,8 @@ export default defineComponent({
     )
     // 圆环进度条
     const  progressCircle = (
-      <div class="wym-progress__circle" style={{width: `${+size}px`, height: `${+size}px`}}>
-        <div class="wym-progress-slot">
+      <div class="wym-progress__circle" style={wrapStyle}>
+        <div class="wym-progress-slot" style={wrapStyle}>
           {$slots.default?.()}
           {!$slots.default && textElement}
         </div>

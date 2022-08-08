@@ -25,5 +25,10 @@ import { iconList } from 'assets/iconfont/iconList'
       word-break: break-all;
     }
   }
+  &::after{
+    content: '';
+    width: 100px;
+    height: 100px;
+  }
 }
 </style>
