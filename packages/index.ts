@@ -8,7 +8,7 @@ import wymIcon from "./icon";
 import dialog from "./dialog";
 import loading from "./loading";
 import toast from "./toast";
-import  "@/assets/style/css/reset.css";
+import  "@/assets/style/css/common.css";
 // 引入图标
 import "assets/iconfont/iconfont.js";
 // 所有组件列表
