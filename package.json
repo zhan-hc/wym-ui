@@ -3,7 +3,7 @@
   "description": "vue3 wangyi music mobile ui",
   "author": "hc-zhan",
   "license": "MIT",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "private": false,
   "main": "lib/packages.umd.min.js",
   "scripts": {

@@ -49,6 +49,16 @@ export const progressProps = {
   round: {
     type: Boolean,
     default: false
+  },
+  /* 水平进度条是否支持点击 */
+  clickEvent: {
+    type: Boolean,
+    default: false
+  },
+  /* 水平进度条是否支持拖拽 */
+  dragEvent: {
+    type: Boolean,
+    default: false
   }
 };
 
