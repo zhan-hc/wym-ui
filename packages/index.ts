@@ -9,6 +9,7 @@ import dialog from "./dialog";
 import loading from "./loading";
 import toast from "./toast";
 import  "@/assets/style/css/common.css";
+import '@/assets/style/scss/_1px.scss';
 // 引入图标
 import "assets/iconfont/iconfont.js";
 // 所有组件列表
