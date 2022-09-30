@@ -36,7 +36,7 @@ export default defineComponent({
           <svg width="50" height="50">
             <circle cx="25" cy="25" r="15" stroke="#c8c9cc" fill="none"></circle>
           </svg>
-          <div class='wym-loading--normal-msg'>{message && msgElement}</div>
+          <div class='wym-loading__msg'>{message && msgElement}</div>
         </div>
       </div>
     )
@@ -48,7 +48,7 @@ export default defineComponent({
             <circle cx="20" cy="20" r="12" stroke="#ff5a4c" fill="none"></circle>
           </svg>
         </div>
-        <div class='wym-loading--primary-msg'>{message && msgElement}</div>
+        <div class='wym-loading__msg'>{message && msgElement}</div>
       </div>
     )
 

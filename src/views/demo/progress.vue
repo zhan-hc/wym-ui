@@ -21,16 +21,6 @@
   <p>{{ percentage }}%</p>
   <button @click="add">+10</button>
   <button @click="reduce">-10</button>
-  <wym-progress
-    type="circle"
-    :percentage="percentage"
-    :strokeWidth="8"
-    size="150"
-    color="#50D4AB"
-    round
-  >
-    {{percentage}}%
-  </wym-progress>
 </template>
 
 <script lang="ts" setup>

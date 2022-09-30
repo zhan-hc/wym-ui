@@ -11,7 +11,7 @@ export default defineComponent({
     const { $slots } = this
     return (
       <div class="scroll-view-wrap">
-        <div class="scroll-view-slot">
+        <div class="scroll-view__slot">
           { $slots.default?.() }
         </div>
       </div>

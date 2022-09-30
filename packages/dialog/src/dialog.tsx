@@ -27,8 +27,8 @@ export default defineComponent({
     const { title, message, cancelBtnText, confirmBtnText, onConfirm, onCancel } = this
     return (
       <div class="wym-dialog-wrap">
-        <div class="wym-dialog-overlay"></div>
-        <div class="wym-dialog-center">
+        <div class="wym-dialog__overlay"></div>
+        <div class="wym-dialog__center">
           <div class="wym-dialog__header">{ title }</div>
           <div class="wym-dialog__content wym-1px-b">
             <div class="wym-dialog__message">

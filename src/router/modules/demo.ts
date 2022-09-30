@@ -13,6 +13,7 @@ const pages = [
   { label: 'demo-歌曲组件', value: 'song-item' },
   { label: 'demo-进度条组件', value: 'progress' },
   { label: 'demo-滚动容器组件', value: 'scroll-view' },
+  { label: 'demo-环形进度条组件', value: 'circular-progress' },
 ]
 
 // 组件化测试页面

@@ -1,0 +1,21 @@
+
+.wym-progress--circle,
+.wym-progress--rect,
+.wym-progress--triangle {
+  position: relative;
+  .wym-progress__slot{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.wym-progress--triangle{
+  .wym-progress__slot{
+    top: 70%;
+  }
+}

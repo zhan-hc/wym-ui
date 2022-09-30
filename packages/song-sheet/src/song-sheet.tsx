@@ -18,7 +18,7 @@ export default defineComponent({
   render() {
     const { data, icon, width, height } = this
 
-    const subTitleElement = (<span class="song-sheet__info-subtitle">{data.subTitle}</span>)
+    const subTitleElement = (<span class="song-sheet__subtitle">{data.subTitle}</span>)
     return (
       <div class="song-sheet-wrap" style={{ width }}>
         <div

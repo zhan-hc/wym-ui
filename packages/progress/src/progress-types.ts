@@ -1,25 +1,5 @@
 import { ExtractPropTypes, Ref } from 'vue';
-
-interface circleStyle {
-  stroke: Ref<string> | string;
-  strokeLinecap: string
-  strokeDasharray: string;
-  strokeDashoffset: string;
-  transition: string;
-}
-
-export interface circleData {
-  path: string,
-  girth: number,
-  radius: number,
-  style: circleStyle | null
-}
-
 export const progressProps = {
-  type: {
-    type: String,
-    default: 'normal'
-  },
   percentage: {
     type: Number,
     default: 0
@@ -39,16 +19,6 @@ export const progressProps = {
   pivotColor: {
     type: String,
     default: '#000'
-  },
-  /* 圆环进度条直径 */
-  size: {
-    type: [Number, String],
-    default: '50'
-  },
-  /* 圆环进度条是否圆角 */
-  round: {
-    type: Boolean,
-    default: false
   },
   /* 水平进度条是否支持点击 */
   clickEvent: {

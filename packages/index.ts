@@ -1,6 +1,7 @@
 import { App } from "vue";
 import wymButton from "./button";
 import wymProgress from "./progress";
+import wymCircularProgress from "./circular-progress";
 import wymScrollView from "./scroll-view";
 import wymSongItem from "./song-item";
 import wymSongSheet from "./song-sheet";
@@ -20,6 +21,7 @@ const components = [
   wymScrollView,
   wymSongItem,
   wymSongSheet,
+  wymCircularProgress
 ];
 
 // 定义 install 方法， App 作为参数

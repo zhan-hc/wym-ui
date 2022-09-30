@@ -15,7 +15,8 @@
     { label: '歌单组件', value: 'song-sheet' },
     { label: '歌曲组件', value: 'song-item' },
     { label: '进度条组件', value: 'progress' },
-    { label: '滚动容器组件', value: 'scroll-view' }
+    { label: '滚动容器组件', value: 'scroll-view' },
+    { label: '环形进度条组件', value: 'circular-progress' },
   ]
 </script>
 
